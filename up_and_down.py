@@ -25,6 +25,6 @@ def best_strategy(start: int) -> List[int]:
     pass
 
 
-def probable_landing_spot(start: int, dice_probabilities: List[int]) -> Dict[int, float]:
+def probability_landing_spot(start: int, dice_probabilities: List[int]) -> Dict[int, float]:
     # TODO implement function
     pass

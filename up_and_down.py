@@ -20,7 +20,7 @@ def best_dice_roll(start: int) -> Tuple[int, int]:
     pass
 
 
-def optimal_way_eyes(start: int) -> List[int]:
+def best_strategy(start: int) -> List[int]:
     # TODO implement function
     pass
 

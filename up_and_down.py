@@ -5,6 +5,10 @@ ladders: List[Tuple[int, int]] = [
     (51, 59), (57, 96), (65, 85), (68, 80), (70, 76), (92, 98)
 ]
 
+result_not_biased_dice: List[int] = [6, 6, 6, 6, 6, 6]
+result_first_biased_dice: List[int] = [2, 2, 2, 2, 2, 26]
+result_second_biased_dice: List[int] = [12, 12, 12, 0, 0, 0]
+
 
 def landing_spot(start: int, eyes: int) -> int:
     # TODO implement function

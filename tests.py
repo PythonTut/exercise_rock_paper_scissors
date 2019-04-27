@@ -1,5 +1,5 @@
 from unittest import TestCase
-from up_and_down import landing_spot, best_dice_roll, optimal_way_eyes, probable_landing_spot
+from up_and_down import landing_spot, best_dice_roll, best_strategy, probability_landing_spot
 
 
 class LadderGameTest(TestCase):
@@ -56,16 +56,16 @@ class LadderGameTest(TestCase):
         self.assertEqual((1, 42), best_dice_roll(30))
 
     def test_best_strategy(self):
-        self.assertEqual([6, 4, 4, 3, 6, 1, 2], optimal_way_eyes(0))
-        self.assertEqual([6, 2, 4, 3, 6, 1, 2], optimal_way_eyes(23))
-        self.assertEqual([1, 4, 3, 6, 1, 2], optimal_way_eyes(30))
+        self.assertEqual([6, 4, 4, 3, 6, 1, 2], best_strategy(0))
+        self.assertEqual([6, 2, 4, 3, 6, 1, 2], best_strategy(23))
+        self.assertEqual([1, 4, 3, 6, 1, 2], best_strategy(30))
 
-    def test_probable_landing_spot(self):
+    def test_probability_landing_spot(self):
         self.assertEqual({1: 1 / 6, 2: 1 / 6, 3: 1 / 6, 4: 1 / 6, 5: 1 / 6, 27: 1 / 6},
-                         probable_landing_spot(0, [6, 6, 6, 6, 6, 6]))
+                         probability_landing_spot(0, [6, 6, 6, 6, 6, 6]))
 
         self.assertEqual({1: 1 / 18, 2: 1 / 18, 3: 1 / 18, 4: 1 / 18, 5: 1 / 18, 27: 13 / 18},
-                         probable_landing_spot(0, [2, 2, 2, 2, 2, 26]))
+                         probability_landing_spot(0, [2, 2, 2, 2, 2, 26]))
 
         self.assertEqual({42: 1 / 3, 32: 1 / 3, 38: 1 / 3, 34: 0.0, 35: 0.0, 36: 0.0},
-                         probable_landing_spot(30, [12, 12, 12, 0, 0, 0]))
+                         probability_landing_spot(30, [12, 12, 12, 0, 0, 0]))

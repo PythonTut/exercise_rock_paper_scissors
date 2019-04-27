@@ -34,7 +34,7 @@ def best_dice_roll(start: int) -> Tuple[int, int]:
     return best_eyes, best_landing_spot
 
 
-def optimal_way_eyes(start: int) -> List[int]:
+def best_strategy(start: int) -> List[int]:
     current_spot = start
     eyes: List[int] = []
 
@@ -45,7 +45,7 @@ def optimal_way_eyes(start: int) -> List[int]:
     return eyes
 
 
-def probable_landing_spot(start: int, dice_probabilities: List[int]) -> Dict[int, float]:
+def probability_landing_spot(start: int, dice_probabilities: List[int]) -> Dict[int, float]:
     tries: int = sum(dice_probabilities)
 
     probable_fields: Dict[int, float] = {}
